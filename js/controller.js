@@ -1,8 +1,10 @@
 ﻿'use strict';
 
-// the storeController contains two objects:
-// - store: contains the product list
-// - cart: the shopping cart object
+/**
+ * @controller storeController
+ * @require $scope, $routeParams
+ * @param {DataService factory} get product list and cart object
+ */
 function storeController($scope, $routeParams, DataService) {
 
     // get store and cart from service
