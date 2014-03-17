@@ -1,5 +1,5 @@
 ﻿<p class="text-info">
-    <img ng-src="img/products/{{product.sku}}.jpg" alt="{{product.name}}"/>
+    <img ng-src="img/products/{{product.sku | lowercase}}.jpg" alt="{{product.name}}"/>
     {{product.name}}: {{product.description}}<br />
 </p>
 
@@ -26,7 +26,7 @@
                 </tr>
                 <tr ng-repeat="(nutrientName, nutrientValue) in product.nutrients">
                     <td class="tdRight"><b>{{nutrientName}}</b></td>
-                    <td class="tdCenter"><img ng-src="img/r{{nutrientValue}}.png" alt="{{nutrientValue}}" /></td>
+                    <td class="tdCenter"><img ng-src="img/r{{nutrientValue | lowercase}}.png" alt="{{nutrientValue}}" /></td>
                     <td>
                         <b>{{store.dvaCaption[nutrientValue]}}</b>:
                         {{store.dvaRange[nutrientValue]}}
