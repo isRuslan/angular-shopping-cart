@@ -18,7 +18,7 @@
         </td>
     </tr>
     <tr ng-repeat="product in store.products | orderBy:'name' | filter:search" >
-        <td class="tdCenter"><img ng-src="img/products/{{product.sku}}.jpg" alt="{{product.name}}" /></td>
+        <td class="tdCenter"><img ng-src="img/products/{{product.sku | lowercase}}.jpg" alt="{{product.name}}" /></td>
         <td>
             <a href="#/products/{{product.sku}}"><b>{{product.name}}</b></a><br />
             {{product.description}}
