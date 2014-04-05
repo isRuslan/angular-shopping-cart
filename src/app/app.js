@@ -1,6 +1,5 @@
 angular.module( 'MyStore', [
   'ui.router',
-  'MyStore.store'
   'templates-app',
   'templates-common'
 ])
@@ -11,7 +10,7 @@ angular.module( 'MyStore', [
       url: '/',
       views: {
         'main': {
-          templateUrl: 'store/store.tpl.html',
+          templateUrl: 'partials/store.tpl.html',
           controller: 'StoreCtrl'            
         }
       },
@@ -21,7 +20,7 @@ angular.module( 'MyStore', [
       url: '/products/:productSku',
       views: {
         'main': {
-          templateUrl: 'product/product.tpl.html',
+          templateUrl: 'partials/product.tpl.html',
           controller: 'StoreCtrl'            
         }
       },
@@ -31,7 +30,7 @@ angular.module( 'MyStore', [
       url: '/cart',
       views: {
         'main': {
-          templateUrl: 'cart/cart.tpl.html',
+          templateUrl: 'partials/cart.tpl.html',
           controller: 'StoreCtrl'            
         }
       },
@@ -52,10 +51,10 @@ angular.module( 'MyStore', [
 .factory("DataService", function () {
 
     // create store
-    var myStore = new store();
+    var myStore = new Store();
 
     // create shopping cart
-    var myCart = new shoppingCart("AngularStore");
+    var myCart = new Cart("AngularStore");
 
     // return data object with store and cart
     return {
@@ -64,4 +63,14 @@ angular.module( 'MyStore', [
     };
 }) 
 
+.controller('StoreCtrl', ['$scope', 'DataService', '$stateParams', function ($scope, DataService, $stateParams) { 
+  // get store and cart from service
+  $scope.store = DataService.store;
+  $scope.cart = DataService.cart;
+  
+  // use routing to pick the selected product
+  if ($stateParams.productSku != null) {
+    $scope.product = $scope.store.getProduct($stateParams.productSku);
+  }
+}])
 ;

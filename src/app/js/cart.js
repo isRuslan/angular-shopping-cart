@@ -1,7 +1,7 @@
 /**
  * Shopping cart @constructor
  */
-function shoppingCart(cartName) {
+function Cart (cartName) {
     this.cartName = cartName;
     this.clearCart = false;
     this.checkoutParameters = {};
@@ -24,7 +24,7 @@ function shoppingCart(cartName) {
 /**
  * Shopping cart methods
  */
-shoppingCart.prototype = {
+Cart.prototype = {
     
     /**
      * Load items from local storage
