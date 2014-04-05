@@ -4,7 +4,7 @@ angular.module( 'MyStore', [
   'templates-common'
 ])
 
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('store', {
       url: '/',
@@ -16,10 +16,15 @@ angular.module( 'MyStore', [
       },
       data: { pageTitle: 'Welcome ' }        
     })
+    .state('products', {
+      url: '/products',
+      abstract: true
+    })
     .state('product', {
-      url: '/products/:productSku',
+      parent: 'products',
+      url: '/:productSku',
       views: {
-        'main': {
+        'main@': {
           templateUrl: 'partials/product.tpl.html',
           controller: 'StoreCtrl'            
         }
@@ -38,6 +43,12 @@ angular.module( 'MyStore', [
     });
 
   $urlRouterProvider.otherwise( '/' );
+
+  /**
+   * Remove # from url
+   */
+  $locationProvider.html5Mode(true);
+
 })
 
 .run(['$rootScope', function ($rootScope) {
@@ -67,7 +78,7 @@ angular.module( 'MyStore', [
   // get store and cart from service
   $scope.store = DataService.store;
   $scope.cart = DataService.cart;
-  
+
   // use routing to pick the selected product
   if ($stateParams.productSku != null) {
     $scope.product = $scope.store.getProduct($stateParams.productSku);
