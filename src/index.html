@@ -2,6 +2,7 @@
 <html ng-app="MyStore">
 <head>
   <title ng-bind="pageTitle"></title>
+  <base href="/">
 
   <!-- font awesome from BootstrapCDN -->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -9,8 +10,6 @@
   <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
   <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
 
-  <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
-  <script type="text/javascript" src="<%= file %>"></script><% }); %>
 </head>
 <body>
   <div class="container-fluid">
@@ -25,6 +24,9 @@
         <div class="container" ui-view="main"></div>
       </div>
     </div>
+  
+  <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+  <script type="text/javascript" src="<%= file %>"></script><% }); %>
   </div>
 </body>
 </html>

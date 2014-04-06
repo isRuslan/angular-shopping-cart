@@ -19,6 +19,11 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks('grunt-html2js');
 
   /**
+   * Use modRewrite for developer server
+   */
+  var modRewrite = require('connect-modrewrite')
+
+  /**
    * Load in our build configuration file.
    */
   var userConfig = require( './build.config.js' );
@@ -482,7 +487,21 @@ module.exports = function ( grunt ) {
           port: '<%= server.port %>',
           hostname: '<%= server.hostname %>',
           base: './<%= build_dir %>',
-          open: true
+          open: true,
+          middleware: function (connect, options) {
+             var proxy = require('grunt-connect-proxy/lib/utils').proxyRequest;
+             return [
+                // Include the proxy first
+                proxy,
+                modRewrite([
+                  '!\\.html|\\.js|\\.css|\\.swf|\\.jp(e?)g|\\.png|\\.svg|\\.gif|\\woff|\\ttf|\\swf|\\eot$ /index.html'
+                ]),
+                // Serve static files.
+                connect.static(options.base),
+                // Make empty directories browsable.
+                connect.directory(options.base)
+             ];
+          }
         }
       }
     }
