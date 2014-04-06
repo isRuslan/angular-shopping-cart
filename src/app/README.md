@@ -5,8 +5,8 @@
 ```
 src/
   |- app/
-  |  |- home/
-  |  |- about/
+  |  |- partials/
+  |  |- js/
   |  |- app.js
   |  |- app.spec.js
 ```
@@ -22,7 +22,7 @@ route `/products`, though this is in no way enforced. Products may then have
 subdirectories for "create", "view", "search", etc. The "view" submodule may
 then define a route of `/products/:id`, ad infinitum.
 
-As `ngBoilerplate` is quite minimal, take a look at the two provided submodules
+As `MyStore` is quite minimal, take a look at the two provided submodules
 to gain a better understanding of how these are used as well as to get a
 glimpse of how powerful this simple construct can be.
 
@@ -43,47 +43,10 @@ app-wide dependencies that are required to assemble your app.
 
 ```js
 angular.module( 'ngBoilerplate', [
+  'ui.router',
   'templates-app',
-  'templates-common',
-  'ngBoilerplate.home',
-  'ngBoilerplate.about'
-  'ui.state',
-  'ui.route'
+  'templates-common'
 ])
-```
-
-With app modules broken down in this way, all routing is performed by the
-submodules we include, as that is where our app's functionality is really
-defined.  So all we need to do in `app.js` is specify a default route to follow,
-which route of course is defined in a submodule. In this case, our `home` module
-is where we want to start, which has a defined route for `/home` in
-`src/app/home/home.js`.
-
-```js
-.config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( '/home' );
-})
-```
-
-Use the main applications run method to execute any code after services
-have been instantiated.
-
-```js
-.run( function run () {
-})
-```
-
-And then we define our main application controller. This is a good place for logic
-not specific to the template or route, such as menu logic or page title wiring.
-
-```js
-.controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
-  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-    if ( angular.isDefined( toState.data.pageTitle ) ) {
-      $scope.pageTitle = toState.data.pageTitle + ' | ngBoilerplate' ;
-    }
-  });
-})
 ```
 
 ### Testing
