@@ -1,16 +1,16 @@
 {
-  "author": "Josh David Miller",
-  "name": "ng-boilerplate",
-  "version": "0.3.1",
-  "homepage": "http://bit.ly/ng-boilerplate",
+  "author": "Ruslan Ismagilov",
+  "name": "angular-shopping-cart",
+  "version": "2.0.2",
+  "homepage": "http://bu-bu.github.io/angular-shopping-cart",
   "licenses": {
     "type": "MIT",
-    "url": "https://raw.github.com/joshdmiller/ng-boilerplate/master/LICENSE"
+    "url": "https://raw.github.com/bu-bu/angular-shopping-cart/master/LICENSE"
   },
-  "bugs": "https://github.com/joshdmiller/ng-boilerplate/issues",
+  "bugs": "https://github.com/bu-bu/angular-shopping-cart/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:joshdmiller/ng-boilerplate.git"
+    "url": "git@github.com:bu-bu/angular-shopping-cart.git"
   },
   "dependencies": {},
   "devDependencies": {
