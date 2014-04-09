@@ -3,7 +3,7 @@
 <img src=http://gruntjs.com/img/grunt-logo.png width=200/> &nbsp; <img src=http://angularjs.org/img/AngularJS-large.png width=250 /> &nbsp; <img src=http://lesscss.org/public/img/logo.png />
 
 An simple frontend kickstarter based on [AngularJS](http://angularjs.org), [Grunt](http://gruntjs.org) and [LESS](http://lesscss.org) for online store.<br/>
-[ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) was taken as kickstarter project.
+[ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) was taken as skeleton project.
 
 ## Quick Start
 Install Node.js and then:
