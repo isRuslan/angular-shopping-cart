@@ -19,6 +19,7 @@ $ grunt
 ## Grunt commands
 * `grunt` or `grunt watch` - build developer project (build dir)
 * `grunt prod` - build production project (prod dir)
+* `grunt test` - run tests
 
 ## Tools
 * [AngularJS](http://angularjs.org) - Base framework
