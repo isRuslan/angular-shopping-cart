@@ -35,6 +35,6 @@
     "grunt-connect-proxy": "^0.1.10"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install; ./node_modules/grunt-cli/bin/grunt heroku"
+    "postinstall": "./node_modules/bower/bin/bower install; ./node_modules/grunt-cli/bin/grunt prod"
   }
 }
