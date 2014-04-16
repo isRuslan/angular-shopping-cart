@@ -80,40 +80,6 @@
 					<i class="icon-trash icon-white" /> clear cart
 				</button>
 			</p>
-
-			<br /><br />
-
-			<p class="text-info">
-				<button
-					class="btn btn-block btn-primary"
-					ng-click="cart.checkout('PayPal')"
-					ng-disabled="cart.getTotalCount() < 1">
-					<i class="icon-ok icon-white" /> check out using PayPal
-				</button>
-				<button 
-					class="btn btn-block btn-primary" 
-					ng-click="cart.checkout('Google')" 
-					ng-disabled="cart.getTotalCount() < 1">
-					<i class="icon-ok icon-white" /> check out using Google
-				</button>
-			</p>
-
-			<br /><br />
-
-			<p class="text-info">
-				<button 
-					class="btn btn-block btn-link"
-					ng-click="cart.checkout('PayPal')"
-					ng-disabled="cart.getTotalCount() < 1" >
-					<img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="checkout PayPal"/>
-				</button>    
-				<button 
-					class="btn btn-block btn-link" 
-					ng-click="cart.checkout('Google')" 
-					ng-disabled="cart.getTotalCount() < 1" >
-					<img src="https://checkout.google.com/buttons/checkout.gif?w=168&h=44&style=white&variant=text" alt="checkoutGoogle"/>
-				</button>    
-			</p>
 		</div>
 	</div>
 </div>
