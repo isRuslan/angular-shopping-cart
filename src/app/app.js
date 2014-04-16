@@ -1,5 +1,6 @@
 angular.module( 'MyStore', [
   'ui.router',
+  'ngProgress',
   'templates-app',
   'templates-common'
 ])
@@ -51,11 +52,19 @@ angular.module( 'MyStore', [
 
 })
 
-.run(['$rootScope', function ($rootScope) {
-  $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+.run(['$rootScope', 'ngProgress', function ($rootScope, ngProgress) {
+
+  $rootScope.$on('$stateChangeStart', function (toState, toParams, fromState, fromParams) {
+    ngProgress.set(0);
+    ngProgress.start();
+    console.log( ngProgress );
+  });
+
+  $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
     if ( angular.isDefined( toState.data.pageTitle ) ) {
       $rootScope.pageTitle = toState.data.pageTitle + ' | MyStore' ;
     }
+    ngProgress.complete();
   });
 }])
 
@@ -80,8 +89,8 @@ angular.module( 'MyStore', [
   $scope.cart = DataService.cart;
 
   // use routing to pick the selected product
-  if ($stateParams.productSku != null) {
-    $scope.product = $scope.store.getProduct($stateParams.productSku);
+  if ( $stateParams.productSku ) {
+    $scope.product = $scope.store.getProduct( $stateParams.productSku );
   }
 }])
 ;

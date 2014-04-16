@@ -79,7 +79,8 @@ module.exports = {
       'vendor/ngprogress/build/ngProgress.js'
     ],
     css: [
-      'vendor/animate.css/animate.css'
+      'vendor/animate.css/animate.css',
+      'vendor/ngprogress/ngProgress.css'
     ],
     assets: [
     ]
