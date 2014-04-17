@@ -80,7 +80,8 @@ module.exports = {
     ],
     css: [
       'vendor/animate.css/animate.css',
-      'vendor/ngprogress/ngProgress.css'
+      'vendor/ngprogress/ngProgress.css',
+      'vendor/bootstrap/docs/assets/css/bootstrap.css'
     ],
     assets: [
     ]
