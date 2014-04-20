@@ -4,6 +4,7 @@
 An simple frontend kickstarter based on [AngularJS](http://angularjs.org), [Grunt](http://gruntjs.org) and [LESS](http://lesscss.org) for online store.<br/>
 * [ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) was taken as skeleton project.
 * [Heroku](https://heroku.com) is using for [production demo](http://angular-store.herokuapp.com/)
+* It is just a fork of [A-Shopping-Cart-Application-Built-with-AngularJS](http://www.codeproject.com/Articles/576246/A-Shopping-Cart-Application-Built-with-AngularJS)
 
 ## Quick Start
 Install Node.js and then:
