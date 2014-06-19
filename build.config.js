@@ -68,7 +68,7 @@ module.exports = {
    */
   vendor_files: {
     js: [
-      'vendor/jquery/jquery.js',
+      'vendor/jquery/dist/jquery.js',
       'vendor/lodash/dist/lodash.js',
       'vendor/angular/angular.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
@@ -81,7 +81,7 @@ module.exports = {
     css: [
       'vendor/animate.css/animate.css',
       'vendor/ngprogress/ngProgress.css',
-      'vendor/bootstrap/docs/assets/css/bootstrap.css'
+      'vendor/bootstrap/dist/css/bootstrap.css'
     ],
     assets: [
     ]
