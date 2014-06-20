@@ -1,5 +1,7 @@
-# [AngularJS Store](http://angular-store.herokuapp.com/)
+# [AngularJS Store](http://angular-store.herokuapp.com/) 
 <img src=http://gruntjs.com/img/grunt-logo.png width=200/> &nbsp; <img src=http://angularjs.org/img/AngularJS-large.png width=250 /> &nbsp; <img src=http://lesscss.org/public/img/logo.png />
+
+[![Build Status](https://travis-ci.org/isRuslan/angular-shopping-cart.svg?branch=master)](https://travis-ci.org/isRuslan/angular-shopping-cart)
 
 An simple frontend kickstarter based on [AngularJS](http://angularjs.org), [Grunt](http://gruntjs.org) and [LESS](http://lesscss.org) for online store.<br/>
 * [ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) was taken as skeleton project.
