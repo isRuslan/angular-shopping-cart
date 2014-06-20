@@ -8,3 +8,7 @@ before_script:
 
 script: grunt prod
 
+deploy:
+  provider: heroku
+  api_key: db181b69-4116-4061-aab9-2d2124fd1eaf
+  app: angular-store
