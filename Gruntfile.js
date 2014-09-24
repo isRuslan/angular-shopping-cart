@@ -487,7 +487,6 @@ module.exports = function ( grunt ) {
           port: '<%= server.port %>',
           hostname: '<%= server.hostname %>',
           base: './<%= build_dir %>',
-          open: true,
           middleware: function (connect, options) {
              var proxy = require('grunt-connect-proxy/lib/utils').proxyRequest;
              return [
