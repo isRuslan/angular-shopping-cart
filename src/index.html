@@ -12,23 +12,19 @@
 
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span10 offset1">
-        <div class="container">
-          <h1 class="well" >
-              <a href="index.html">
-                  <img src="assets/img/logo.png" height="60" width="60" alt="logo"/>
-              </a>
-              Angular Store 
-          </h1>        
-        </div>
-        <div class="container" ui-view="main"></div>
-      </div>
-    </div>
-  
-  <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
-  <script type="text/javascript" src="<%= file %>"></script><% }); %>
+  <div class="container">
+    <h1 class="well" >
+        <a href="index.html">
+            <img src="assets/img/logo.png" height="60" width="60" alt="logo"/>
+        </a>
+        Angular Store 
+    </h1>        
   </div>
+  <div class="container" ui-view="main"></div>
+  
+  <!-- compiled JavaScript -->
+  <% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script>
+  <% }); %>
 </body>
 </html>
