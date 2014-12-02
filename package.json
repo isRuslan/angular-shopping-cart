@@ -39,6 +39,6 @@
     "grunt-cli": "^0.1.13"
   },
   "scripts": {
-    "postinstall": "npm i; ./node_modules/bower/bin/bower install; ./node_modules/grunt-cli/bin/grunt prod"
+    "postinstall": "./node_modules/bower/bin/bower install; ./node_modules/grunt-cli/bin/grunt prod"
   }
 }
