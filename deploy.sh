@@ -5,7 +5,7 @@ cd prod
 git init
 
 git config user.name "Travis CI"
-git config user.email "isRuslan@is.ismagilov@gmail.com"
+git config user.email "travis@travis-mail"
 
 git add -A
 git commit -m "Deploy to GitHub Pages"
