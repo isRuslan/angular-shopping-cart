@@ -13,4 +13,4 @@ script: bash ./deploy.sh
 env:
   global:
     GH_REF: github.com/isRuslan/angular-shopping-cart.git
-    secure: aXus2UG2Cg0gKu5C90b0fS4xHTkd50EXa668i9j4TgDz69JW+xItvvbluevMqd0PO1y2Cx1zGKUtDj6puCjUbq5HkwcVcU7W4SU/50Kr7Ys1dhFR6xFgRWd8tqUP3e6ARXXx1cgYrajmrinI5qX1aYqOABqyk6CZQDzfBKH+zPY=
+    GH_TOKEN: aXus2UG2Cg0gKu5C90b0fS4xHTkd50EXa668i9j4TgDz69JW+xItvvbluevMqd0PO1y2Cx1zGKUtDj6puCjUbq5HkwcVcU7W4SU/50Kr7Ys1dhFR6xFgRWd8tqUP3e6ARXXx1cgYrajmrinI5qX1aYqOABqyk6CZQDzfBKH+zPY=
