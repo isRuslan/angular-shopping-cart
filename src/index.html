@@ -8,14 +8,14 @@
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
   <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
-  <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+  <link rel="stylesheet" type="text/css" href="./<%= file %>" /><% }); %>
 
 </head>
 <body>
   <div class="container">
     <h1 class="well" >
         <a href="index.html">
-            <img src="assets/img/logo.png" height="60" width="60" alt="logo"/>
+            <img src="./assets/img/logo.png" height="60" width="60" alt="logo"/>
         </a>
         Angular Store 
     </h1>        
@@ -24,7 +24,7 @@
   
   <!-- compiled JavaScript -->
   <% scripts.forEach( function ( file ) { %>
-    <script type="text/javascript" src="<%= file %>"></script>
+    <script type="text/javascript" src="./<%= file %>"></script>
   <% }); %>
 </body>
 </html>
