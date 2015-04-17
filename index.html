@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="MyStore">
+<head>
+  <title ng-bind="pageTitle"></title>
+  <base href="/">
+
+  <!-- font awesome from BootstrapCDN -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  <!-- compiled CSS -->
+  <link rel="stylesheet" type="text/css" href="./assets/angular-shopping-cart-2.0.3.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="well" >
+        <a href="index.html">
+            <img src="./assets/img/logo.png" height="60" width="60" alt="logo"/>
+        </a>
+        Angular Store 
+    </h1>        
+  </div>
+  <div class="container" ui-view="main"></div>
+  
+  <!-- compiled JavaScript -->
+  
+    <script type="text/javascript" src="./assets/angular-shopping-cart-2.0.3.js"></script>
+  
+</body>
+</html>
