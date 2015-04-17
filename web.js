@@ -5,6 +5,4 @@ app.use(express.logger());
 app.use('/', express.static('prod/'));
 
 var port = process.env.PORT || 5000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+app.listen(port);
