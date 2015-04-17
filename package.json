@@ -42,6 +42,6 @@
     "phantomjs": "~1.9.12"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install; ./node_modules/grunt-cli/bin/grunt prod"
+    "postinstall": "bower install && grunt prod"
   }
 }

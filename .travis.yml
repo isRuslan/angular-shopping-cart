@@ -1,16 +1,10 @@
 language: node_js
-
 node_js:
-  - "0.10"
-
-deploy:
-  provider: heroku
-  api_key: db181b69-4116-4061-aab9-2d2124fd1eaf
-  app: angular-store
-
+- '0.10'
 before_script:
-  - npm install --quiet -g grunt-cli karma bower
-  - bower install
-
-script: grunt prod
-
+- npm install
+script: bash ./deploy.sh
+env:
+  global:
+    GH_REF: github.com/isRuslan/angular-shopping-cart.git
+    secure: aXus2UG2Cg0gKu5C90b0fS4xHTkd50EXa668i9j4TgDz69JW+xItvvbluevMqd0PO1y2Cx1zGKUtDj6puCjUbq5HkwcVcU7W4SU/50Kr7Ys1dhFR6xFgRWd8tqUP3e6ARXXx1cgYrajmrinI5qX1aYqOABqyk6CZQDzfBKH+zPY=
