@@ -1,17 +1,11 @@
 #!/bin/bash
 set -e
 
-rm -rf prod || exit 0;
-mkdir prod;
-
 cd prod
 git init
 
 git config user.name "Travis CI"
 git config user.email "isRuslan@is.ismagilov@gmail.com"
-
-ls -la
-git status
 
 git add -A
 git commit -m "Deploy to GitHub Pages"
