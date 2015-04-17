@@ -7,6 +7,8 @@ cache:
   - vendor
 before_script:
 - npm install
+- ./node_modules/.bin/bower install
+- ./node_modules/.bin/grunt prod
 script: bash ./deploy.sh
 env:
   global:

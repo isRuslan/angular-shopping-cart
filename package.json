@@ -2,15 +2,15 @@
   "author": "Ruslan Ismagilov",
   "name": "angular-shopping-cart",
   "version": "2.0.2",
-  "homepage": "http://bu-bu.github.io/angular-shopping-cart",
+  "homepage": "http://isRuslan.github.io/angular-shopping-cart",
   "licenses": {
     "type": "MIT",
-    "url": "https://raw.github.com/bu-bu/angular-shopping-cart/master/LICENSE"
+    "url": "https://raw.github.com/isRuslan/angular-shopping-cart/master/LICENSE"
   },
-  "bugs": "https://github.com/bu-bu/angular-shopping-cart/issues",
+  "bugs": "https://github.com/isRuslan/angular-shopping-cart/issues",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bu-bu/angular-shopping-cart.git"
+    "url": "git@github.com:isRuslan/angular-shopping-cart.git"
   },
   "engines": {
     "node": "0.10.x"
@@ -40,8 +40,5 @@
   },
   "peerDependencies": {
     "phantomjs": "~1.9.12"
-  },
-  "scripts": {
-    "postinstall": "bower install && grunt prod"
   }
 }
